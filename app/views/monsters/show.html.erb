@@ -3,6 +3,19 @@
     <div class="col">
         <p><%= @monster.description%></p>
     </div>
+    <h2> Lista de tweets: </h2>
+    <div class="col">
+        <p><% @monster.tweets.each do |tweet| %>
+            <div class="row">
+                <p><td> <%= tweet.content %> </td></p>
+            </div>
+        <% end %>
+        </div>
 </div>
 
+
 <button class="btn btn-danger"> Eliminar monstruo</button>
+
+<footer>
+  <p>Copyright © 2022</p>
+</footer>
