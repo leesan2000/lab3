@@ -13,9 +13,11 @@
         <% @monsters.each do |monster| %>
             <tr>
                 <td><%= monster.name %></td>
-                <td><%= if monster.tweets.count > 1 %>
-                    <div class="twittero"> Twittero Destacado </div>
-                    </td>
+                <td>
+                    <% if monster.tweets.count > 1 %>
+                        <div="twittero"> Twittero Destacado </div>
+                    <% end %>
+                </td>
                 <td><%= link_to "Perfil", monster, class: "btn btn-dark" %></td>
                 <td><%= link_to "Eliminar", monster, class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Estas seguro?" } %></td>
             </tr>
